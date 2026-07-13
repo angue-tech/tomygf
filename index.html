@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+<base target="_blank">
+</head>
+<body>
+
+    <!-- PASSCODE SCREEN -->
+    <div id="passcode-screen">
+        <div class="lock-icon">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm6-9h-1V6a5 5 0 0 0-10 0v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zM8 6a4 4 0 0 1 8 0v2H8V6z"/>
+            </svg>
+        </div>
+        <div class="passcode-title">Enter Passcode</div>
+        <div class="passcode-subtitle">babyy!</div>
+        <div class="passcode-dots">
+            <div class="dot" data-index="0"></div>
+            <div class="dot" data-index="1"></div>
+            <div class="dot" data-index="2"></div>
+            <div class="dot" data-index="3"></div>
+        </div>
+        <div class="keypad">
+            <button class="key" data-num="1">1</button>
+            <button class="key" data-num="2">2</button>
+            <button class="key" data-num="3">3</button>
+            <button class="key" data-num="4">4</button>
+            <button class="key" data-num="5">5</button>
+            <button class="key" data-num="6">6</button>
+            <button class="key" data-num="7">7</button>
+            <button class="key" data-num="8">8</button>
+            <button class="key" data-num="9">9</button>
+            <button class="key empty"></button>
+            <button class="key" data-num="0">0</button>
+            <button class="key empty"></button>
+        </div>
+    </div>
+
+    <!-- FLOWER BLOOM OVERLAY -->
+    <div id="flower-overlay">
+        <div class="flower-garden" id="flower-garden">
+            <!-- Center large flower -->
+            <div class="flower center" id="center-flower" style="z-index: 10;">
+                <svg width="200" height="200" viewBox="0 0 200 200">
+                    <defs>
+                        <linearGradient id="petalGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#f5d0d5"/>
+                            <stop offset="100%" style="stop-color:#e8b4b8"/>
+                        </linearGradient>
+                        <linearGradient id="centerGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#d4a574"/>
+                            <stop offset="100%" style="stop-color:#c99765"/>
+                        </linearGradient>
+                    </defs>
+                    <ellipse cx="100" cy="50" rx="25" ry="40" fill="url(#petalGrad1)" transform="rotate(0 100 100)"/>
+                    <ellipse cx="100" cy="50" rx="25" ry="40" fill="url(#petalGrad1)" transform="rotate(45 100 100)"/>
+                    <ellipse cx="100" cy="50" rx="25" ry="40" fill="url(#petalGrad1)" transform="rotate(90 100 100)"/>
+                    <ellipse cx="100" cy="50" rx="25" ry="40" fill="url(#petalGrad1)" transform="rotate(135 100 100)"/>
+                    <ellipse cx="100" cy="50" rx="25" ry="40" fill="url(#petalGrad1)" transform="rotate(180 100 100)"/>
+                    <ellipse cx="100" cy="50" rx="25" ry="40" fill="url(#petalGrad1)" transform="rotate(225 100 100)"/>
+                    <ellipse cx="100" cy="50" rx="25" ry="40" fill="url(#petalGrad1)" transform="rotate(270 100 100)"/>
+                    <ellipse cx="100" cy="50" rx="25" ry="40" fill="url(#petalGrad1)" transform="rotate(315 100 100)"/>
+                    <circle cx="100" cy="100" r="22" fill="url(#centerGrad1)"/>
+                </svg>
+            </div>
+
+            <!-- Surrounding flowers -->
+            <div class="flower" style="top: 15%; left: 15%;" data-delay="0.2">
+                <svg width="100" height="100" viewBox="0 0 100 100">
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#f5d0d5" transform="rotate(0 50 50)"/>
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#f5d0d5" transform="rotate(72 50 50)"/>
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#f5d0d5" transform="rotate(144 50 50)"/>
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#f5d0d5" transform="rotate(216 50 50)"/>
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#f5d0d5" transform="rotate(288 50 50)"/>
+                    <circle cx="50" cy="50" r="12" fill="#d4a574"/>
+                </svg>
+            </div>
+
+            <div class="flower" style="top: 10%; right: 20%;" data-delay="0.4">
+                <svg width="80" height="80" viewBox="0 0 100 100">
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#e8c4c8" transform="rotate(0 50 50)"/>
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#e8c4c8" transform="rotate(72 50 50)"/>
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#e8c4c8" transform="rotate(144 50 50)"/>
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#e8c4c8" transform="rotate(216 50 50)"/>
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#e8c4c8" transform="rotate(288 50 50)"/>
+                    <circle cx="50" cy="50" r="12" fill="#c99765"/>
+                </svg>
+            </div>
+
+            <div class="flower" style="bottom: 25%; left: 10%;" data-delay="0.3">
+                <svg width="90" height="90" viewBox="0 0 100 100">
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#f0c4c8" transform="rotate(0 50 50)"/>
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#f0c4c8" transform="rotate(72 50 50)"/>
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#f0c4c8" transform="rotate(144 50 50)"/>
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#f0c4c8" transform="rotate(216 50 50)"/>
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#f0c4c8" transform="rotate(288 50 50)"/>
+                    <circle cx="50" cy="50" r="12" fill="#d4a574"/>
+                </svg>
+            </div>
+
+            <div class="flower" style="bottom: 20%; right: 15%;" data-delay="0.5">
+                <svg width="110" height="110" viewBox="0 0 100 100">
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#f5d0d5" transform="rotate(0 50 50)"/>
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#f5d0d5" transform="rotate(72 50 50)"/>
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#f5d0d5" transform="rotate(144 50 50)"/>
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#f5d0d5" transform="rotate(216 50 50)"/>
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#f5d0d5" transform="rotate(288 50 50)"/>
+                    <circle cx="50" cy="50" r="12" fill="#d4a574"/>
+                </svg>
+            </div>
+
+            <div class="flower" style="top: 30%; left: 5%;" data-delay="0.6">
+                <svg width="70" height="70" viewBox="0 0 100 100">
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#e8c4c8" transform="rotate(0 50 50)"/>
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#e8c4c8" transform="rotate(72 50 50)"/>
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#e8c4c8" transform="rotate(144 50 50)"/>
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#e8c4c8" transform="rotate(216 50 50)"/>
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#e8c4c8" transform="rotate(288 50 50)"/>
+                    <circle cx="50" cy="50" r="12" fill="#c99765"/>
+                </svg>
+            </div>
+
+            <div class="flower" style="top: 25%; right: 5%;" data-delay="0.35">
+                <svg width="85" height="85" viewBox="0 0 100 100">
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#f0c4c8" transform="rotate(0 50 50)"/>
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#f0c4c8" transform="rotate(72 50 50)"/>
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#f0c4c8" transform="rotate(144 50 50)"/>
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#f0c4c8" transform="rotate(216 50 50)"/>
+                    <ellipse cx="50" cy="25" rx="14" ry="22" fill="#f0c4c8" transform="rotate(288 50 50)"/>
+                    <circle cx="50" cy="50" r="12" fill="#d4a574"/>
+                </svg>
+            </div>
+
+            <div class="bloom-text" id="bloom-text">Our Memories are right here</div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content">
+        <div class="container">
+            <header class="main-header">
+                <div class="subtitle">Us and our</div>
+                <h1 contenteditable="true">Memories</h1>
+                <div class="divider"></div>
+                <p class="header-desc" contenteditable="true">
+                    These are our most memorable moments together, babyyy!
+                </p>
+            </header>
+
+            <div class="photo-grid">
+                <!-- Photo 1 -->
+                <div class="photo-card">
+                    <div class="card-number">1</div>
+                    <div class="">
+                        <img src="our phtos/IMG_2145.JPG" alt="Memory 1">
+                    </div>
+                    <div class="card-label" contenteditable="true"></div>
+                </div>
+
+                <!-- Photo 2 -->
+                <div class="photo-card">
+                    <div class="card-number">2</div>
+                    <div class="">
+                        <img src="our phtos/IMG_2755.JPG" alt ="Memory 2">
+                        </div>
+                    <div class="card-label" contenteditable="true"></div>
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="photo-card">
+                    <div class="card-number">3</div>
+                    <div class="img-placeholder">
+                       <img src="our phtos/IMG_3959.JPG" alt="Memory 3">
+                       </div>
+                    <div class="card-label" contenteditable="true"></div>
+                </div>
+
+                <!-- Photo 4 -->
+                <div class="photo-card">
+                    <div class="card-number">4</div>
+                    <div class="img-placeholder">
+                        <img src="our phtos/IMG_1908.JPG" alt="Memory 4">
+                    </div>
+                    <div class="card-label" contenteditable="true"></div>
+                </div>
+
+                <!-- Photo 5 -->
+                <div class="photo-card">
+                    <div class="card-number">5</div>
+                    <div class="img-placeholder">
+                        <img src="our phtos/IMG_2171.JPG" alt="Memory 5">
+                    </div>
+                    <div class="card-label" contenteditable="true"></div>
+                </div>
+
+                <!-- Photo 6 -->
+                <div class="photo-card">
+                    <div class="card-number">6</div>
+                    <div class="img-placeholder">
+                        <img src="our phtos/IMG_2108.JPG" alt="Memory 6">
+                    </div>
+                    <div class="card-label" contenteditable="true"></div>
+                </div>
+            </div>
+
+            <div class="message-section">
+                <div class="message-box">
+                    <h2 contenteditable="true">Note</h2>
+                    <div class="message-content" contenteditable="true">
+                        I know this is pretty late but I just wanna remind you that I love youu always and I will always be here for you. You are my everything and I can't wait to make more memories with you. HAPPY ANNIVERSARY BABY! Another year and another memories to make. -3- mwuah!
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            Made with <span class="heart">&#9829;</span> for you
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
